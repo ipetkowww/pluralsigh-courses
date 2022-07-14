@@ -1,15 +1,15 @@
-package main.part1definingclasses.version1;
+package part1definingclasses.alarmv1;
 
-class Alarm {
+public class Alarm {
 
     boolean active;
     final String message;
 
-    Alarm(String message) {
+    public Alarm(String message) {
         this.message = message;
     }
 
-    void turnOn() {
+    public void turnOn() {
         active = true;
     }
 
@@ -28,7 +28,7 @@ class Alarm {
         return "";
     }
 
-    void sendReport() {
+    public void sendReport() {
         System.out.println(getReport(true));
     }
 }

@@ -1,7 +1,7 @@
-package main.part2hidinginformation.main;
+package part2encapsulation;
 
 
-import main.part2hidinginformation.version2.Alarm;
+import part2encapsulation.alarmv2.Alarm;
 
 public class Main {
 

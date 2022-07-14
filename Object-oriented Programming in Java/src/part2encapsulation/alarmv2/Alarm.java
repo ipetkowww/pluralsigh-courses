@@ -1,4 +1,4 @@
-package main.part2hidinginformation.version2;
+package part2encapsulation.alarmv2;
 
 import java.time.LocalDateTime;
 

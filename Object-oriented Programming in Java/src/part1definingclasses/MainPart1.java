@@ -1,8 +1,8 @@
-package main.part1definingclasses.version1;
+package part1definingclasses;
 
-import main.part1definingclasses.version1.Alarm;
+import part1definingclasses.alarmv1.Alarm;
 
-public class Main {
+public class MainPart1 {
 
     public static void main(String[] args) {
         Alarm alarm = new Alarm("Temperature too high");
