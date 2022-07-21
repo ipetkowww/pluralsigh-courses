@@ -6,6 +6,8 @@
             <class name="Get200" />
             <class name="Get401" />
             <class name="Get404" />
+            <class name="SpecificUserEndpointTests" />
+            <class name="RateLimitEndpointTests" />
         </classes>
     </test>
 </suite>

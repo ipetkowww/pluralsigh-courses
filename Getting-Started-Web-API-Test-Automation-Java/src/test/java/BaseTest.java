@@ -1,7 +1,5 @@
-import data.TestData;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
@@ -16,14 +14,16 @@ public class BaseTest {
     protected CloseableHttpClient client;
     protected CloseableHttpResponse response;
 
+    protected BaseApi baseApi;
+
     @BeforeMethod
     public void setup() {
-        client = HttpClientBuilder.create().build();
+        baseApi = new BaseApi();
     }
 
     @AfterTest
     public void closeResources() throws IOException {
-        client.close();
+        baseApi.close();
         response.close();
     }
 }
