@@ -18,23 +18,26 @@ public class BrowsePage {
     private static final By COURSE = By.cssSelector(".browse-search-results-item");
     private static final By SEARCH_FIELD = By.cssSelector(".browse-search-form-text");
 
-    public void searchBy(String value) {
+    public BrowsePage searchBy(String value) {
         WebElement element = webDriver.findElement(SEARCH_FIELD);
         element.sendKeys(value);
         element.sendKeys(Keys.ENTER);
         wait.until(ExpectedConditions.elementToBeClickable(COURSE));
+        return this;
     }
 
-    public void filterBySkillLevels(String value) {
+    public BrowsePage filterBySkillLevels(String value) {
         By skillLevel = By.xpath(String.format("//label[@for='%s']", value));
         webDriver.findElement(skillLevel).click();
         wait.until(ExpectedConditions.elementToBeClickable(COURSE));
+        return this;
     }
 
-    public void filterBySubject(String value) throws InterruptedException {
+    public BrowsePage filterBySubject(String value) throws InterruptedException {
         By subject = By.xpath(String.format("//label[text()='%s']", value));
         webDriver.findElement(subject).click();
         Thread.sleep(2000); // just for testing purposes. will be removed later
+        return this;
     }
 
     public void clickOnCourse(String courseName) {
@@ -43,5 +46,4 @@ public class BrowsePage {
         By foundCourse = By.xpath(selector);
         webDriver.findElement(foundCourse).click();
     }
-
 }

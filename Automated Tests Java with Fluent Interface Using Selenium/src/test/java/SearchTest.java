@@ -9,10 +9,10 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void searchTest() throws InterruptedException {
-        searchPage.searchBy("java");
-        searchPage.filterBySkillLevels("Beginner");
-        searchPage.filterBySubject("Software development");
-        searchPage.clickOnCourse("Java 11 Fundamentals: Collections");
+        searchPage.searchBy("java")
+                .filterBySkillLevels("Beginner")
+                .filterBySubject("Software development")
+                .clickOnCourse("Java 11 Fundamentals: Collections");
 
         coursePage.verifyPreviewThisCourseButtonDisplayed();
     }

@@ -15,5 +15,4 @@ public class CoursePage {
         assertTrue(webDriver.findElement(PREVIEW_THIS_COURSE_BUTTON).isDisplayed(),
                 "Preview This Course button is not displayed");
     }
-
 }
