@@ -1,17 +1,16 @@
-package pages;
+package pages.course;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static driver.WebDriverSingleton.getChromeDriver;
 import static org.testng.Assert.assertTrue;
+import static pages.course.CoursePageElement.PREVIEW_THIS_COURSE_BUTTON;
 
-public class CoursePage {
+public class CoursePageVerification {
 
-    private final WebDriver webDriver = getChromeDriver();
-    private static final By PREVIEW_THIS_COURSE_BUTTON = By.cssSelector("#play-overview-button");
+    private WebDriver webDriver = getChromeDriver();
 
-    public void verifyPreviewThisCourseButtonDisplayed() {
+    public void previewThisCourseButtonDisplayed() {
         assertTrue(webDriver.findElement(PREVIEW_THIS_COURSE_BUTTON).isDisplayed(),
                 "Preview This Course button is not displayed");
     }
